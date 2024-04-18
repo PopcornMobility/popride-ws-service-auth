@@ -33,7 +33,7 @@ let AuthService = class AuthService {
         return result;
     }
     async Authenticate(token) {
-        let response = await axios.get(`http://stage-app-cityride.eu-central-1.elasticbeanstalk.com/api/v1/me`, { headers: { 'Authorization': `${token}` } });
+        let response = await axios.get(`http://app.prod.taxiapp.ro/api/v1/me`, { headers: { 'Authorization': `${token}` } });
         return response.data.user;
     }
     async Decode(token) {
